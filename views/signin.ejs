@@ -4,167 +4,107 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Sign In</title>
 </head>
 <body>
-    <style>
-    *{
-        margin:0;
-        padding:0;
-        font-family:sans-serif;
-    }
-    .banner{
-width:100%;
-height:100vh;
-background-image: linear-gradient(rgba(0,0,0,0.75),rgba(0,0,0,0.75)),url(https://img.freepik.com/free-photo/cloud-blue-sky_1232-3108.jpg?t=st=1718288006~exp=1718291606~hmac=41a7dedc7b88c2ffc8aa43980d23e673a7e8f538be4d5f0fa4fe559f812a510c&w=996);
-background-size: cover;
-background-position: center;
+<style>
+* {
+    margin: 0;
+    padding: 0;
+    font-family: sans-serif;
 }
-.navbar{
-width:85%;
-margin:auto;
-padding:35px 0;
-display:flex;
-align-items:center;
-justify-content:space-between;
+.banner {
+    width: 100%;
+    height: 100vh;
+    background-image: linear-gradient(rgba(0,0,0,0.75), rgba(0,0,0,0.75)), url(https://img.freepik.com/free-photo/cloud-blue-sky_1232-3108.jpg?t=st=1718288006~exp=1718291606~hmac=41a7dedc7b88c2ffc8aa43980d23e673a7e8f538be4d5f0fa4fe559f812a510c&w=996);
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
-.navbar{
-text-decoration: none;
-color:#fff;
+.navbar {
+    width: 85%;
+    margin: auto;
+    padding: 35px 0;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    color: #fff;
 }
-.logo{
-width:120px;
-cursor:pointer;
+.content {
+    width: 100%;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    text-align: center;
+    color: #fff;
 }
-.content{
-width:100%;
-position:absolute;
-top:50%;
-transform: translateY(-50%);
-text-align: center;
-color:#fff;
-}
-.content h1{
-font-size:60px;
-margin-top:80px;
-}
-.content p{
-margin: 20px auto;
-font-weight: 100;
-line-height: 25px;
-}
-button{
-width:200px;
-padding:10px 0;
-background-color:black ;
-text-align:center;
-color:#fff;
-margin:20px 10px;
-border-radius:25px;
-border-color:#009688 ;
-font-weight:bold;
-cursor: pointer;
-transition: width 2s;
-transition-timing-function: linear;
-}
-body {
-	font-family: sans-serif;	
-	background-image: url(bg.jpg);
-	background-repeat: no-repeat;
-	overflow: hidden;
-	background-size: cover;
-}
-
 .container {
-	width: 500px;
-	margin:7% auto;
-	border-radius: 16px;
-	background-color: rgba(0,0,0,0.1);
-	box-shadow: 0 0 17px #333;
+    width: 500px;
+    margin: 0 auto;
+    border-radius: 16px;
+    background-color: rgba(255, 255, 255, 0.8);
+    box-shadow: 0 0 17px #333;
+    padding: 50px 20px;
 }
-
-.header {
-	text-align: center;
-	padding-top: 50px;
-}
-
 .header h1 {
-	color: #333;
-	font-size: 35px;
-	margin-bottom: 50px;
+    color: #333;
+    font-size: 35px;
+    margin-bottom: 30px;
 }
-
 .main {
-	text-align: center;
+    text-align: center;
 }
-
-.main input, button {
-	width: 200px;
-	height: 30px;
-	border:none;
-	outline: none;
-	padding-left: 30px;
-	box-sizing: border-box;
-	font-size: 15px;
-	color: #333;
-	margin-bottom: 30px;
+.main input[type="text"], .main input[type="password"] {
+    width: 80%;
+    height: 40px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    padding: 0 10px;
+    margin-bottom: 20px;
+    font-size: 16px;
 }
-
 .main button {
-	padding-left: 0;
-	background-color: #83acf1;
-	letter-spacing: 1px;
-	font-weight: bold;
-	margin-bottom: 70px;
+    width: 200px;
+    height: 40px;
+    background-color: #83acf1;
+    border: none;
+    border-radius: 5px;
+    color: #000;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
 }
-
 .main button:hover {
-	box-shadow: 2px 2px 5px #555;
-	background-color: #7799d4;
-}
-.main input:hover {
-	box-shadow: 2px 2px 5px #555;
-	background-color: #ddd;
-}
-
-.main span {
-	position: relative;
-}
-
-.main i {
-	position: absolute;
-	left: 15px;
-	color: #333;
-	font-size: 16px;
-	top: 2px;
+    background-color: #7799d4;
 }
 </style>
- 
-    <div class="banner">
-        <div class="navbar">
-            <h1>WEATHER</h1>
-        </div>
-        <div class="content">
-            <div class="container">
-                <div class="header">
-                    <h1>SIGNIN</h1>
-                </div>
-                <div class="main">
-                    <form action="signinsubmit" method="GET">
-                        <span>
-                            <i class="fa fa-lock"></i>
-                            Email_id:<input type="text" name="email">
-                        </span><br>
-                        <span>
-                            <i class="fa fa-lock"></i>
-                            Password:<input type="password" name="password">
-                        </span><br>
-                        <button type="submit" class="submit">Sign In</button>
-           
-                    </form>
-                </div>
+
+<div class="banner">
+    <div class="navbar">
+        <h1>WEATHER</h1>
+    </div>
+    <div class="content">
+        <div class="container">
+            <div class="header">
+                <h1>SIGN IN</h1>
             </div>
+            <div class="main">
+                <form action="signinsubmit" method="post">
+                    <span>
+                        <i class="fa fa-envelope"></i>
+                        Email_id:<input type="text" name="email" required>
+                    </span><br>
+                    <span>
+                        <i class="fa fa-lock"></i>
+                        Password:<input type="password" name="password" required>
+                    </span><br>
+                    <button type="submit" class="submit">Sign In</button>
+                </form>
             </div>
         </div>
+    </div>
+</div>
 </body>
 </html>
